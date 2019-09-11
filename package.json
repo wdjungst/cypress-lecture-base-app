@@ -1,0 +1,12 @@
+{
+  "name": "create-repack-app",
+  "version": "1.0.0",
+  "scripts": {
+    "deploy": "cp -a client/build/. public/",
+    "build": "cd client && yarn && yarn build && cd .. && yarn deploy",
+    "heroku-postbuild": "npm run build && npm run deploy && echo 'Client Built'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
